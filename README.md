@@ -78,14 +78,14 @@ Hardhat is powerfool software allowing smarter deployment process through settab
 ACCOUNTKEY = "...";
 ```
 
-** Quicky deploy from other wallet by updating of ACCOUNTKEY value into __ .env __ file **
+**Quicky deploy from other wallet by updating of ACCOUNTKEY value into __.env__ file**
 
-*** Best practice is to use specific account to use in test / POC usage. Never use __ ACCOUNTKEY __ already used ***
-*** Always be sure to add this file in __ .gitignore __ file to prevent any data leak- ***
+***Best practice is to use specific account to use in test / POC usage. Never use __ ACCOUNTKEY __ already used***
+***Always be sure to add this file in __ .gitignore __ file to prevent any data leak-***
 
 
 ### 3.2 Compile the smart contract
-** Contracts are stored into __ Contracts __ folder **
+**Contracts are stored into __Contracts__ folder**
 
 ```bash
 npx hardhat compile
@@ -93,7 +93,7 @@ npx hardhat compile
 
 ### 3.3 Run tests on smart contract
 
-** Test scripts are located into test folder **
+**Test scripts are located into test folder**
 
 ```bash
 npx hardhat test
@@ -103,7 +103,7 @@ You can find more details about the whole process in the Dacade [NFT Contract De
 
 ### 3.5 Deploy the smart contract to the Celo testnet Aljafores
 
-** Last step of deployment in case all was right, __ HARDHAT __ will use __ ACCOUNTKEY __ value to call smart contract creation from corresponding wallet **
+**Last step of deployment in case all was right, __HARDHAT__ will use __ACCOUNTKEY__ value to call smart contract creation from corresponding wallet**
 
 ```bash
 npx hardhat run --network alfajores scripts/deploy.js
