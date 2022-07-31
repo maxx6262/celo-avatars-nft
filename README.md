@@ -67,29 +67,43 @@ This learning module [NFT Contract Development with Hardhat](https://hackmd.io/e
 
 ## 3. Smart-Contract Deployment
 
-### 3.1 Compile the smart contract
+Hardhat is powerfool software allowing smarter deployment process through settable environment.
+
+### 3.1 Setting of deploument environment
+
+- Create a file in the root directory called ".env"
+- Inside the file, create a key called ACCOUNTKEY and paste in your private key. e.g
+
+```js
+ACCOUNTKEY = "...";
+```
+
+** Quicky deploy from other wallet by updating of ACCOUNTKEY value into __ .env __ file **
+
+*** Best practice is to use specific account to use in test / POC usage. Never use __ ACCOUNTKEY __ already used ***
+*** Always be sure to add this file in __ .gitignore __ file to prevent any data leak- ***
+
+
+### 3.2 Compile the smart contract
+** Contracts are stored into __ Contracts __ folder **
 
 ```bash
 npx hardhat compile
 ```
 
-### 3.2 Run tests on smart contract
+### 3.3 Run tests on smart contract
+
+** Test scripts are located into test folder **
 
 ```bash
 npx hardhat test
 ```
 
-### 3.3 Update env file
-
-- Create a file in the root directory called ".env"
-- Create a key called ACCOUNTKEY and paste in your private key. e.g
-
-```js
-ACCOUNTKEY = "...";
-```
 You can find more details about the whole process in the Dacade [NFT Contract Development with Hardhat](https://hackmd.io/exuZTH2hTqKytn2vxgDmcg) learning module. It will also show you how to get testnet tokens for your account so you can deploy your smart contract in the next step.
 
 ### 3.5 Deploy the smart contract to the Celo testnet Aljafores
+
+** Last step of deployment in case all was right, __ HARDHAT __ will use __ ACCOUNTKEY __ value to call smart contract creation from corresponding wallet **
 
 ```bash
 npx hardhat run --network alfajores scripts/deploy.js
